@@ -46,7 +46,7 @@ integrations:
               split: horizontal
               split_by: \s+
               set_header: [implementation, native, byteswap]
-        - name: ZFS_Zpool
+        - name: ZFS_zpoolList
           commands:
             - run: "zpool list -Hp"
               split: horizontal
