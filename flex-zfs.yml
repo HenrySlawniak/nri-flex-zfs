@@ -52,4 +52,10 @@ integrations:
               split: horizontal
               split_by: \s+
               set_header: [pool_name, size, alloc, free, ckpoint, expandsz, frag, cap, dedup, health, altroot]
+        - name: ZFS_zfsList
+          commands:
+            - run: "zfs list -Hp"
+              split: horizontal
+              split_by: \s+
+              set_header: [name, used, avail, refer, mountpoint]
 
